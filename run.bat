@@ -1,11 +1,11 @@
 @echo off
 setlocal
-title Lovable Project - Development Server
+title PIXEL RESURRECT - Image Restoration Studio
 
 cd /d "%~dp0"
 
 echo ==========================================
-echo       LOVABLE PROJECT LAUNCHER
+echo       PIXEL RESURRECT - IMAGE RESTORATION
 echo ==========================================
 echo Project: %CD%
 echo.
@@ -41,7 +41,7 @@ call npm --version
 echo.
 
 if not exist "node_modules" (
-    echo [INFO] Installing dependencies...
+    echo [INFO] Installing PIXEL RESURRECT dependencies...
     call npm install
 
     if errorlevel 1 (
@@ -49,17 +49,19 @@ if not exist "node_modules" (
         pause
         exit /b 1
     )
+) else (
+    echo [INFO] Dependencies already installed.
 )
 
 echo.
-echo [INFO] Starting development server...
+echo [INFO] Starting PIXEL RESURRECT...
 echo [INFO] Keep this window open.
 echo.
 
 call npm run dev
 
 echo.
-echo [INFO] Development server stopped.
+echo [INFO] PIXEL RESURRECT development server stopped.
 pause
 
 endlocal
